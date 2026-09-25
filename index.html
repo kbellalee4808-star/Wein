@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>황금빛 예술과 제국의 품격, 비엔나 원데이 트립</title>
+<meta name="description" content="부다페스트에서 출발하는 12시간 빈 예술·궁전 여정 — 벨베데레, 미술사 박물관, 호프부르크, 슈테판 대성당">
+<meta property="og:title" content="황금빛 예술과 제국의 품격, 비엔나 원데이 트립">
+<meta property="og:description" content="부다페스트에서 출발하는 가장 완벽한 12시간 빈 예술·궁전 여정">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1B3A5C; --navy-deep:#122840; --gold:#D4A94A; --champagne:#EBD9A8;
+  --ivory:#FAF7F2; --ash:#F1ECE3; --ink:#24303D; --muted:#6B7480;
+  --serif:'Noto Serif KR','Nanum Myeongjo',Georgia,serif;
+  --sans:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  box-sizing:border-box;
+}
+*,*::before,*::after{box-sizing:inherit;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:var(--ash);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7;
+  word-break:keep-all;overflow-wrap:break-word;-webkit-tap-highlight-color:transparent}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+.page{max-width:520px;margin:0 auto;background:var(--ivory);min-height:100dvh;
+  padding-bottom:env(safe-area-inset-bottom,0px)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;background:var(--navy-deep);color:var(--ivory);overflow:hidden;
+  padding:calc(56px + env(safe-area-inset-top,0px)) 28px 44px}
+.hero svg.mosaic{position:absolute;inset:0;width:100%;height:100%;opacity:.9}
+.hero-inner{position:relative}
+.route-line{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--champagne);letter-spacing:.02em;margin-bottom:28px}
+.route-line span.bar{flex:1;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(30px,8.4vw,40px);line-height:1.28;letter-spacing:-.01em}
+.hero h1 .gold-line{display:block;color:var(--gold)}
+.hero p.sub{margin-top:18px;font-size:15px;color:#D8DEE6;max-width:30ch}
+.hero .clock{margin-top:34px;display:flex;align-items:baseline;gap:12px;border-top:1px solid rgba(212,169,74,.35);padding-top:18px}
+.hero .clock b{font-family:var(--serif);font-size:44px;color:var(--gold);line-height:1}
+.hero .clock small{font-size:13px;color:#C9D1DB;line-height:1.5}
+
+.highlights{padding:28px 22px 8px;display:grid;gap:10px}
+.hl{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;background:#fff;border-left:3px solid var(--gold);border-radius:0 10px 10px 0}
+.hl .ic{font-size:22px;line-height:1.3}
+.hl strong{display:block;font-size:15px;color:var(--navy)}
+.hl span{font-size:13.5px;color:var(--muted)}
+
+/* ---------- Sections ---------- */
+section.block{padding:48px 22px 8px}
+.over{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:15px;letter-spacing:.03em}
+.block h2{font-family:var(--serif);font-weight:700;font-size:25px;color:var(--navy);line-height:1.35;margin:4px 0 8px}
+.block .lead{font-size:14.5px;color:var(--muted);margin-bottom:22px}
+
+/* ---------- Timeline ---------- */
+.tl{position:relative;list-style:none;padding-left:0}
+.tl::before{content:"";position:absolute;left:62px;top:10px;bottom:10px;width:2px;
+  background:linear-gradient(var(--gold),var(--champagne) 60%,var(--navy))}
+.tl li{position:relative;display:grid;grid-template-columns:52px 1fr;gap:22px;margin-bottom:14px}
+.tl .t{font-family:var(--serif);font-weight:700;font-size:15px;color:var(--navy);text-align:right;padding-top:14px;line-height:1.2}
+.tl .t small{display:block;font-family:var(--sans);font-weight:400;font-size:11.5px;color:var(--muted);margin-top:3px}
+.tl li::after{content:"";position:absolute;left:57px;top:18px;width:12px;height:12px;border-radius:50%;
+  background:var(--ivory);border:2px solid var(--gold)}
+.tl li.key::after{background:var(--gold)}
+.card{background:#fff;border-radius:12px;box-shadow:0 1px 0 rgba(27,58,92,.06),0 6px 18px -12px rgba(27,58,92,.35)}
+.tl .card>button{width:100%;text-align:left;padding:13px 44px 13px 16px;min-height:56px;position:relative}
+.tl .card>button::after{content:"";position:absolute;right:18px;top:24px;width:8px;height:8px;border-right:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(45deg);transition:transform .25s}
+.tl .card.open>button::after{transform:rotate(-135deg);top:28px}
+.tl h3{font-size:15.5px;font-weight:700;color:var(--ink);line-height:1.45}
+.badge{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:20px;margin-top:6px;margin-right:4px}
+.b-train{background:#E6ECF3;color:var(--navy)}
+.b-must{background:var(--navy);color:var(--champagne)}
+.b-tram{background:#FBEFD0;color:#8A6412}
+.b-walk{background:#EEF1EA;color:#4B5E3C}
+.b-food{background:#F7E6E0;color:#8C4A34}
+.tl .more{display:none;padding:0 16px 16px;font-size:14px;color:#46525F}
+.tl .card.open .more{display:block}
+.more ul{padding-left:18px;margin-top:6px}
+.more li{display:list-item;margin:0 0 4px;grid-template-columns:none}
+.more li::after{display:none}
+.more .path{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.more .path span{font-size:12.5px;background:var(--ash);padding:3px 9px;border-radius:14px}
+
+/* ---------- Map ---------- */
+.mapwrap{background:var(--navy);border-radius:16px;padding:14px 12px 10px;color:var(--ivory)}
+.mapwrap svg{width:100%;height:auto;display:block}
+.mapwrap svg path,.mapwrap svg rect,.mapwrap svg>text,.mapwrap svg>g:not(.pin){pointer-events:none}
+.pin{cursor:pointer}
+.pin circle.dot{fill:var(--ivory);stroke:var(--gold);stroke-width:3;transition:r .2s}
+.pin.active circle.dot{fill:var(--gold)}
+.pin text{font-family:var(--sans);font-size:12.5px;fill:var(--ivory);font-weight:700}
+.pin:focus{outline:none}
+.pin:focus-visible circle.halo{stroke:var(--champagne);stroke-width:2}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:12px;color:#C9D1DB;padding:6px 6px 2px}
+.legend i{display:inline-block;width:18px;height:0;border-top:2px solid;vertical-align:middle;margin-right:5px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:14px 0 4px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;min-height:44px;padding:0 14px;border-radius:22px;border:1px solid #D9CFBD;background:#fff;font-size:13.5px;font-weight:500}
+.chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:var(--ivory)}
+.spot{margin-top:10px;padding:20px 18px}
+.spot .no{font-family:var(--serif);color:var(--gold);font-size:14px}
+.spot h3{font-family:var(--serif);font-size:21px;color:var(--navy);line-height:1.35;margin:2px 0 2px}
+.spot .en{font-size:12.5px;color:var(--muted)}
+.spot p{font-size:14.5px;margin-top:12px}
+.spot ul{margin:10px 0 0 18px;font-size:14px;color:#46525F}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:56px;border-radius:12px;
+  font-weight:700;font-size:15px;text-decoration:none;margin-top:16px}
+.btn-navy{background:var(--navy);color:var(--ivory)}
+.btn-gold{background:var(--gold);color:var(--navy-deep)}
+
+/* ---------- Booking ---------- */
+.book{display:grid;gap:12px}
+.book .card{padding:18px}
+.book .step{display:flex;gap:12px;align-items:center}
+.book .step b{flex:none;width:30px;height:30px;border-radius:50%;background:var(--navy);color:var(--gold);
+  display:grid;place-items:center;font-family:var(--serif);font-size:14px}
+.book h3{font-size:16px;color:var(--navy)}
+.book p{font-size:14px;color:#46525F;margin-top:8px}
+.book .btn{margin-top:12px;min-height:52px;font-size:14.5px}
+.notice{margin-top:14px;padding:14px 16px;border-radius:12px;background:#FFF7E3;border:1px solid #EAD49A;font-size:13.5px;color:#6A5217}
+.notice strong{color:#4E3B0B}
+
+/* ---------- Transport table ---------- */
+.fare{width:100%;border-collapse:collapse;font-size:14px;margin-top:6px}
+.fare th,.fare td{padding:11px 8px;border-bottom:1px solid #E6DFD2;text-align:left}
+.fare th{font-weight:500;color:var(--muted);font-size:12.5px}
+.fare td.num{text-align:right;font-weight:700;color:var(--navy);white-space:nowrap}
+
+/* ---------- Checklist ---------- */
+.check{list-style:none;display:grid;gap:10px}
+.check label{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:12px;padding:15px 16px;min-height:56px;cursor:pointer}
+.check input{appearance:none;-webkit-appearance:none;flex:none;width:24px;height:24px;border:2px solid var(--gold);border-radius:6px;margin-top:1px;display:grid;place-items:center;background:#fff}
+.check input:checked{background:var(--navy);border-color:var(--navy)}
+.check input:checked::after{content:"";width:6px;height:11px;border:solid var(--gold);border-width:0 2.5px 2.5px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.check strong{display:block;font-size:15px;color:var(--navy)}
+.check span{font-size:13.5px;color:var(--muted)}
+.check input:checked ~ div strong{text-decoration:line-through;text-decoration-color:var(--gold)}
+.progress{font-size:13px;color:var(--muted);margin:-8px 0 14px}
+
+footer{margin-top:52px;padding:34px 24px calc(34px + env(safe-area-inset-bottom,0px));background:var(--navy-deep);color:#AFBACA;font-size:12.5px;text-align:center}
+footer .f-title{font-family:var(--serif);color:var(--gold);font-size:16px;margin-bottom:8px}
+
+@media (max-width:360px){
+  .hero{padding-left:20px;padding-right:20px}
+  section.block{padding-left:16px;padding-right:16px}
+  .tl li{grid-template-columns:46px 1fr;gap:18px}
+  .tl::before{left:54px}.tl li::after{left:49px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero-inner>*{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.hero-inner>*:nth-child(2){animation-delay:.12s}.hero-inner>*:nth-child(3){animation-delay:.24s}.hero-inner>*:nth-child(4){animation-delay:.36s}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <svg class="mosaic" viewBox="0 0 400 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <pattern id="tiles" width="40" height="40" patternUnits="userSpaceOnUse">
+        <rect x="4" y="4" width="12" height="12" fill="#D4A94A" opacity=".16"/>
+        <rect x="24" y="22" width="10" height="14" fill="#EBD9A8" opacity=".10"/>
+        <circle cx="30" cy="10" r="4" fill="none" stroke="#D4A94A" stroke-width="1.2" opacity=".22"/>
+        <circle cx="10" cy="30" r="2.2" fill="#D4A94A" opacity=".2"/>
+      </pattern>
+      <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#122840" stop-opacity="1"/>
+        <stop offset=".55" stop-color="#122840" stop-opacity=".55"/>
+        <stop offset="1" stop-color="#122840" stop-opacity="0"/>
+      </linearGradient>
+      <radialGradient id="glow" cx="85%" cy="18%" r="60%">
+        <stop offset="0" stop-color="#D4A94A" stop-opacity=".35"/>
+        <stop offset="1" stop-color="#D4A94A" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="400" height="520" fill="url(#tiles)"/>
+    <rect width="400" height="520" fill="url(#glow)"/>
+    <rect width="400" height="520" fill="url(#fade)"/>
+    <!-- gold spirals -->
+    <g fill="none" stroke="#D4A94A" stroke-width="1.4" opacity=".45">
+      <path d="M340 90a14 14 0 1 1-14-14a24 24 0 1 1-24 24a34 34 0 1 1 34 34"/>
+      <path d="M372 250a10 10 0 1 1-10-10a18 18 0 1 1-18 18"/>
+    </g>
+  </svg>
+  <div class="hero-inner">
+    <div class="route-line">부다페스트 <span class="bar"></span> 🚂 <span class="bar"></span> 빈</div>
+    <h1>황금빛 예술과 제국의 품격,<span class="gold-line">비엔나 원데이 트립</span></h1>
+    <p class="sub">부다페스트에서 출발하는 가장 완벽한 12시간 빈 예술·궁전 여정</p>
+    <div class="clock"><b>12h</b><small>아침 8시 30분 출발<br>밤 11시쯤 부다페스트 복귀</small></div>
+  </div>
+</header>
+
+<div class="highlights">
+  <div class="hl"><div class="ic">🚂</div><div><strong>고속열차 Railjet</strong><span>부다페스트 ↔ 빈 편도 약 2시간 40분</span></div></div>
+  <div class="hl"><div class="ic">🎨</div><div><strong>벨베데레 상궁</strong><span>클림트 《키스》와 에곤 실레 걸작</span></div></div>
+  <div class="hl"><div class="ic">☕</div><div><strong>돔 홀 카페 &amp; 《바벨탑》</strong><span>세계에서 가장 아름다운 카페, Café KHM</span></div></div>
+  <div class="hl"><div class="ic">🏛️</div><div><strong>합스부르크 골목 산책 &amp; 슈니첼</strong><span>호프부르크에서 슈테판 대성당, 저녁은 피그뮐러</span></div></div>
+</div>
+
+<!-- ================= TIMELINE ================= -->
+<section class="block" id="timeline">
+  <p class="over">Timetable</p>
+  <h2>하루 일정</h2>
+  <p class="lead">카드를 누르면 세부 내용이 열려요.</p>
+  <ol class="tl">
+    <li class="key"><div class="t">08:30<small>~11:10</small></div>
+      <div class="card"><button aria-expanded="false"><h3>켈레티역 출발 → 빈 중앙역 도착</h3><span class="badge b-train">Railjet</span></button>
+      <div class="more">부다페스트 켈레티(Keleti)역에서 빈 중앙역(Wien Hbf)까지 직행. 좌석 지정해 두면 편하게 앉아 갈 수 있어요.<br>※ 예매할 때 실제 시간표를 꼭 확인하세요.</div></div></li>
+
+    <li><div class="t">11:10<small>~12:20</small></div>
+      <div class="card"><button aria-expanded="false"><h3>벨베데레 정원 산책</h3><span class="badge b-walk">도보 15분</span><span class="badge b-walk">무료</span></button>
+      <div class="more">중앙역에서 걸어서 약 15분. 하궁에서 상궁까지 이어지는 바로크 정원은 무료예요. 천천히 걸으며 사진 찍기 좋은 시간!</div></div></li>
+
+    <li class="key"><div class="t">12:30<small>~14:00</small></div>
+      <div class="card"><button aria-expanded="false"><h3>벨베데레 상궁 관람</h3><span class="badge b-must">✅ 예약 완료</span></button>
+      <div class="more">12:30 입장 예약 완료. 입장 후에는 시간 제한 없이 볼 수 있어요.
+        <ul><li>클림트 《키스》, 《유디트》</li><li>에곤 실레 컬렉션</li><li>대리석 홀(Marble Hall)</li></ul></div></div></li>
+
+    <li><div class="t">14:00<small>~14:20</small></div>
+      <div class="card"><button aria-expanded="false"><h3>트램 D번으로 이동</h3><span class="badge b-tram">트램 D</span></button>
+      <div class="more"><div class="path"><span>Schloss Belvedere 승차</span><span>Burgring 하차</span></div>
+      링슈트라세를 따라 달리는 노선이라 창밖 풍경도 좋아요.</div></div></li>
+
+    <li class="key"><div class="t">14:30<small>~16:45</small></div>
+      <div class="card"><button aria-expanded="false"><h3>빈 미술사 박물관 &amp; 돔 홀 카페</h3><span class="badge b-must">14:30 예약</span><span class="badge b-food">점심 겸 티타임</span></button>
+      <div class="more">돔 아래 원형 소파에서 멜랑쥐와 아펠슈트루델. 카페는 박물관 안에 있어서 입장권만 있으면 돼요.
+        <ul><li>브뤼헐 《바벨탑》</li><li>페르메이르 《회화의 예술》</li><li>라파엘로 《초원의 마돈나》</li></ul></div></div></li>
+
+    <li><div class="t">16:50<small>~17:30</small></div>
+      <div class="card"><button aria-expanded="false"><h3>호프부르크 왕궁 외관 산책</h3><span class="badge b-walk">도보</span><span class="badge b-walk">무료</span></button>
+      <div class="more"><div class="path"><span>부르크 문</span><span>영웅 광장</span><span>미하엘 광장</span></div></div></div></li>
+
+    <li><div class="t">17:30<small>~18:00</small></div>
+      <div class="card"><button aria-expanded="false"><h3>콜마르크트 → 그라벤 거리</h3><span class="badge b-walk">도보</span></button>
+      <div class="more">황실 시절 명품 거리와 빈의 대표 산책로. 쇼윈도 구경하며 대성당 쪽으로 걸어가요.</div></div></li>
+
+    <li><div class="t">18:00<small>~18:25</small></div>
+      <div class="card"><button aria-expanded="false"><h3>슈테판 대성당</h3><span class="badge b-walk">무료 구역</span></button>
+      <div class="more">입구 쪽 내부는 무료로 들어가 볼 수 있어요. 밖에서 모자이크 지붕도 꼭 올려다보세요.</div></div></li>
+
+    <li class="key"><div class="t">18:30<small>~19:45</small></div>
+      <div class="card"><button aria-expanded="false"><h3>피그뮐러 슈니첼 저녁</h3><span class="badge b-must">18:30 예약</span><span class="badge b-food">슈니첼</span></button>
+      <div class="more">1905년부터 이어온 원조 슈니첼 집. 접시보다 큰 슈니첼과 감자 샐러드가 대표 메뉴예요.<br>
+        <div class="path"><span>본점 Wollzeile 5</span><span>대성당에서 도보 3분</span></div></div></div></li>
+
+    <li class="key"><div class="t">19:50<small>~23:10</small></div>
+      <div class="card"><button aria-expanded="false"><h3>U1 → 빈 중앙역 → 부다페스트</h3><span class="badge b-tram">지하철 U1</span><span class="badge b-train">20:30 Railjet</span></button>
+      <div class="more">슈테판플라츠역에서 U1을 타면 중앙역까지 약 6분. 20:30 열차로 부다페스트에는 23시쯤 도착해요.</div></div></li>
+  </ol>
+</section>
+
+<!-- ================= MAP ================= -->
+<section class="block" id="map">
+  <p class="over">Route Map</p>
+  <h2>한눈에 보는 동선</h2>
+  <p class="lead">지도의 점이나 아래 버튼을 눌러 보세요.</p>
+
+  <div class="mapwrap">
+    <svg viewBox="0 0 360 400" role="group" aria-label="빈 원데이 동선 지도">
+      <!-- Ring road -->
+      <path d="M92 70 Q180 28 262 78 Q300 150 262 222 Q176 262 96 214 Q58 140 92 70Z" fill="rgba(250,247,242,.04)" stroke="#EBD9A8" stroke-opacity=".35" stroke-width="10" stroke-linejoin="round"/>
+      <text x="270" y="60" fill="#EBD9A8" fill-opacity=".55" font-size="11" font-family="Noto Sans KR">링슈트라세</text>
+      <!-- routes -->
+      <path d="M232 368 L258 300" stroke="#C9D1DB" stroke-width="2.5" stroke-dasharray="2 6" stroke-linecap="round" fill="none"/>
+      <path d="M258 300 Q262 250 230 230 Q150 250 96 206" stroke="#D4A94A" stroke-width="3" fill="none"/>
+      <path d="M96 206 L134 150 L196 124" stroke="#C9D1DB" stroke-width="2.5" stroke-dasharray="2 6" stroke-linecap="round" fill="none"/>
+      <path d="M196 124 Q300 200 232 368" stroke="#8FA8C4" stroke-width="2" stroke-dasharray="8 6" fill="none"/>
+      <!-- Hbf -->
+      <g><rect x="218" y="360" width="28" height="18" rx="4" fill="#EBD9A8"/><text x="232" y="373" text-anchor="middle" font-size="11" fill="#122840" font-weight="700" font-family="Noto Sans KR">Hbf</text>
+      <text x="252" y="392" fill="#C9D1DB" font-size="11" font-family="Noto Sans KR">빈 중앙역</text></g>
+      <!-- pins -->
+      <g class="pin" data-spot="0" tabindex="0" role="button" aria-label="벨베데레 상궁"><circle class="halo" cx="258" cy="300" r="18" fill="transparent" stroke="transparent"/><circle class="dot" cx="258" cy="300" r="9"/><text x="276" y="304">벨베데레</text></g>
+      <g class="pin" data-spot="1" tabindex="0" role="button" aria-label="빈 미술사 박물관"><circle class="halo" cx="96" cy="206" r="18" fill="transparent" stroke="transparent"/><circle class="dot" cx="96" cy="206" r="9"/><text x="30" y="240">미술사 박물관</text></g>
+      <g class="pin" data-spot="2" tabindex="0" role="button" aria-label="호프부르크 왕궁"><circle class="halo" cx="134" cy="150" r="18" fill="transparent" stroke="transparent"/><circle class="dot" cx="134" cy="150" r="9"/><text x="58" y="138">호프부르크</text></g>
+      <g class="pin" data-spot="3" tabindex="0" role="button" aria-label="슈테판 대성당"><circle class="halo" cx="196" cy="124" r="18" fill="transparent" stroke="transparent"/><circle class="dot" cx="196" cy="124" r="9"/><text x="210" y="112">슈테판 대성당</text></g>
+    </svg>
+    <div class="legend">
+      <span><i style="border-color:#D4A94A"></i>트램 D</span>
+      <span><i style="border-color:#C9D1DB;border-top-style:dotted"></i>도보</span>
+      <span><i style="border-color:#8FA8C4;border-top-style:dashed"></i>지하철 U1 (복귀)</span>
+    </div>
+  </div>
+
+  <div class="chips" role="group" aria-label="스팟 선택">
+    <button class="chip" data-spot="0" aria-pressed="true">벨베데레 상궁</button>
+    <button class="chip" data-spot="1" aria-pressed="false">미술사 박물관</button>
+    <button class="chip" data-spot="2" aria-pressed="false">호프부르크 왕궁</button>
+    <button class="chip" data-spot="3" aria-pressed="false">슈테판 대성당</button>
+  </div>
+
+  <article class="card spot" id="spotCard" aria-live="polite"></article>
+</section>
+
+<!-- ================= BOOKING ================= -->
+<section class="block" id="booking">
+  <p class="over">Booking Center</p>
+  <h2>예약 &amp; 링크 모음</h2>
+  <p class="lead">출발 전에 순서대로 예약해 두세요.</p>
+
+  <div class="book">
+    <div class="card">
+      <div class="step"><b>1</b><h3>기차표 · 오스트리아 연방철도 ÖBB</h3></div>
+      <p>갈 때 08:30 부다페스트 출발, 올 때 20:30 빈 출발. ÖBB 앱에서 발권하면 QR코드로 바로 탑승해요.</p>
+      <a class="btn btn-navy" href="https://www.oebb.at/en/" target="_blank" rel="noopener">ÖBB에서 기차표 예매</a>
+    </div>
+    <div class="card">
+      <div class="step"><b>2</b><h3>기차표 · 헝가리 철도 MÁV</h3></div>
+      <p>부다페스트 출발 국제선 할인 티켓을 찾아볼 수 있어요. ÖBB와 가격을 비교해 보세요.</p>
+      <a class="btn btn-navy" href="https://jegy.mav.hu/" target="_blank" rel="noopener">MÁV에서 기차표 예매</a>
+    </div>
+    <div class="card">
+      <div class="step"><b>3</b><h3>벨베데레 상궁 · 12:30 ✅</h3></div>
+      <p>예약 완료! 확인 메일의 QR코드를 휴대폰에 저장해 두세요. 성인 약 €23~24.</p>
+      <a class="btn btn-gold" href="https://www.belvedere.at/en/tickets" target="_blank" rel="noopener">벨베데레 예약 확인</a>
+    </div>
+    <div class="card">
+      <div class="step"><b>4</b><h3>빈 미술사 박물관 · 14:30 슬롯</h3></div>
+      <p>시간 지정 예약제예요. 14:30 슬롯으로 예매하세요. 온라인 성인 €22, 돔 홀 카페 이용도 이 입장권으로 해결돼요.</p>
+      <a class="btn btn-gold" href="https://shop.khm.at/tickets" target="_blank" rel="noopener">KHM 입장권 예매</a>
+    </div>
+    <div class="card">
+      <div class="step"><b>5</b><h3>피그뮐러 슈니첼 · 18:30</h3></div>
+      <p>저녁엔 예약만으로 꽉 차는 곳이에요. 공식 사이트에서 본점 Wollzeile의 RESERVATION을 눌러 예약하세요. 본점이 마감이면 바로 옆 Bäckerstraße 지점도 좋아요.</p>
+      <a class="btn btn-gold" href="https://figlmueller.at/?lang=en" target="_blank" rel="noopener">피그뮐러 예약하기</a>
+    </div>
+  </div>
+
+  <div class="notice"><strong>📌 꼭 확인하세요</strong><br>
+    · 2026년 9월 8일부터 미술사 박물관도 <strong>입장 시간 지정 예약제</strong>로 바뀌었어요. 14:30 슬롯을 잡으세요.<br>
+    · 미술사 박물관은 <strong>월요일 휴관</strong>(여름철 제외)이에요. 월요일 여행이면 일정을 바꿔야 해요.<br>
+    · 가짜 예매 사이트가 많아요. 위 공식 링크에서만 구매하세요.</div>
+</section>
+
+<!-- ================= TRANSPORT ================= -->
+<section class="block" id="transport">
+  <p class="over">Getting Around</p>
+  <h2>빈 시내 교통권</h2>
+  <p class="lead">2026년부터 요금이 올랐어요. 앱(WienMobil)으로 사면 조금 더 저렴해요.</p>
+  <div class="card" style="padding:6px 16px 10px">
+    <table class="fare">
+      <thead><tr><th>교통권</th><th style="text-align:right">앱</th><th style="text-align:right">종이</th></tr></thead>
+      <tbody>
+        <tr><td>1회권</td><td class="num">€3.00</td><td class="num">€3.20</td></tr>
+        <tr><td>24시간권</td><td class="num">€9.70</td><td class="num">€10.20</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="notice" style="background:#EEF2F7;border-color:#C7D3E1;color:#2C4560"><strong style="color:var(--navy)">💡 이 일정이라면</strong><br>
+    트램 D 1번 + 복귀 지하철 U1 1번 = 대중교통 2번이에요. <strong style="color:var(--navy)">1회권 2장(앱 €6.00)</strong>이 24시간권보다 저렴해요. 종이 티켓은 타기 전에 꼭 개찰기에 찍으세요.</div>
+</section>
+
+<!-- ================= CHECKLIST ================= -->
+<section class="block" id="packing">
+  <p class="over">Packing List</p>
+  <h2>준비물 체크</h2>
+  <p class="progress" id="progress">0 / 5 준비 완료</p>
+  <ul class="check">
+    <li><label><input type="checkbox" data-k="passport"><div><strong>🛂 실물 여권</strong><span>쉥겐 국가 간 이동이어도 열차 안에서 불시 검사가 있을 수 있어요.</span></div></label></li>
+    <li><label><input type="checkbox" data-k="shoes"><div><strong>👟 편한 신발</strong><span>박물관 두 곳과 구시가지까지 하루 종일 걸어요.</span></div></label></li>
+    <li><label><input type="checkbox" data-k="bag"><div><strong>👜 작은 크로스백</strong><span>백팩은 미술관 보관함에 맡겨야 해요. 가벼운 가방이 편해요.</span></div></label></li>
+    <li><label><input type="checkbox" data-k="apps"><div><strong>📱 ÖBB · WienMobil 앱</strong><span>기차표와 교통권 QR코드를 미리 저장해 두세요.</span></div></label></li>
+    <li><label><input type="checkbox" data-k="tickets"><div><strong>🎟️ 예약 3건</strong><span>벨베데레 12:30 · 미술사 박물관 14:30 · 피그뮐러 18:30</span></div></label></li>
+  </ul>
+</section>
+
+<footer>
+  <div class="f-title">Wien, ein Tag</div>
+  요금·시간표는 2026년 9월 기준이에요.<br>출발 전 공식 사이트에서 한 번 더 확인하세요.
+</footer>
+</div>
+
+<script>
+(function(){
+  /* Timeline accordion */
+  document.querySelectorAll('.tl .card>button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var c=b.parentElement, open=c.classList.toggle('open');
+      b.setAttribute('aria-expanded',open?'true':'false');
+    });
+  });
+
+  /* Spots */
+  var spots=[
+    {no:'Spot 1',ko:'벨베데레 상궁',en:'Upper Belvedere',
+     desc:'오스트리아 미술의 정점. 클림트 황금 시기의 명작을 가장 많이 볼 수 있는 곳이에요.',
+     items:['클림트 《키스》 · 《유디트》','에곤 실레 컬렉션','바로크 정원은 무료 산책'],
+     q:'Upper+Belvedere+Vienna'},
+    {no:'Spot 2',ko:'빈 미술사 박물관 & 카페',en:'Kunsthistorisches Museum · Café KHM',
+     desc:'합스부르크 황실 컬렉션을 모은 박물관. 돔 아래 카페에서 쉬어 가는 시간이 이 여정의 하이라이트예요.',
+     items:['브뤼헐 《바벨탑》','페르메이르 《회화의 예술》','라파엘로 《초원의 마돈나》'],
+     q:'Kunsthistorisches+Museum+Wien'},
+    {no:'Spot 3',ko:'호프부르크 왕궁',en:'Hofburg',
+     desc:'600년 넘게 합스부르크 제국을 다스린 왕궁. 부르크 문을 지나면 장엄한 영웅 광장이 펼쳐져요.',
+     items:['부르크 문 · 영웅 광장 (무료)','미하엘 광장 (무료)','콜마르크트 쇼핑 거리로 이어짐'],
+     q:'Hofburg+Wien'},
+    {no:'Spot 4',ko:'슈테판 대성당',en:"St. Stephen's Cathedral",
+     desc:'모자이크 지붕이 반짝이는 빈의 상징. 입구 쪽 내부는 무료로 들어가 볼 수 있어요.',
+     items:['색 타일 지붕 외관 감상','무료 구역에서 고딕 내부 둘러보기','근처 피그뮐러에서 슈니첼 저녁'],
+     q:"St.+Stephen's+Cathedral+Vienna"}
+  ];
+  var card=document.getElementById('spotCard');
+  var chips=document.querySelectorAll('.chip'), pins=document.querySelectorAll('.pin');
+  function show(i){
+    var s=spots[i];
+    card.innerHTML='<p class="no">'+s.no+'</p><h3>'+s.ko+'</h3><p class="en">'+s.en+'</p><p>'+s.desc+'</p><ul>'+
+      s.items.map(function(t){return '<li>'+t+'</li>';}).join('')+'</ul>'+
+      '<a class="btn btn-navy" href="https://maps.google.com/?q='+s.q+'" target="_blank" rel="noopener">📍 구글맵에서 열기</a>';
+    chips.forEach(function(c){c.setAttribute('aria-pressed',c.dataset.spot==i?'true':'false');});
+    pins.forEach(function(p){p.classList.toggle('active',p.dataset.spot==i);});
+  }
+  chips.forEach(function(c){c.addEventListener('click',function(){show(+c.dataset.spot);});});
+  pins.forEach(function(p){
+    p.addEventListener('click',function(){show(+p.dataset.spot);});
+    p.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();show(+p.dataset.spot);}});
+  });
+  show(0);
+
+  /* Checklist */
+  var boxes=document.querySelectorAll('.check input'), prog=document.getElementById('progress');
+  var saved={};
+  try{saved=JSON.parse(localStorage.getItem('vienna-pack')||'{}')||{};}catch(e){saved={};}
+  function update(){
+    var n=0;boxes.forEach(function(b){if(b.checked)n++;});
+    prog.textContent=n+' / '+boxes.length+' 준비 완료'+(n===boxes.length?' ✨':'');
+  }
+  boxes.forEach(function(b){
+    b.checked=!!saved[b.dataset.k];
+    b.addEventListener('change',function(){
+      saved[b.dataset.k]=b.checked;
+      try{localStorage.setItem('vienna-pack',JSON.stringify(saved));}catch(e){}
+      update();
+    });
+  });
+  update();
+})();
+</script>
+</body>
+</html>
