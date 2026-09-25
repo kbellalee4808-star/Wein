@@ -140,6 +140,29 @@ section.block{padding:48px 22px 8px}
 .check input:checked ~ div strong{text-decoration:line-through;text-decoration-color:var(--gold)}
 .progress{font-size:13px;color:var(--muted);margin:-8px 0 14px}
 
+/* ---------- Guide ---------- */
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:#E9E1D2;padding:5px;border-radius:14px;margin-bottom:14px}
+.tab{min-height:48px;border-radius:10px;font-weight:700;font-size:14.5px;color:var(--muted)}
+.tab[aria-selected="true"]{background:var(--navy);color:var(--ivory)}
+.gpanel{display:grid;gap:8px}
+.gpanel[hidden]{display:none}
+.gitem>button{width:100%;text-align:left;display:flex;align-items:center;gap:12px;padding:12px 44px 12px 14px;min-height:60px;position:relative}
+.gitem>button::after{content:"";position:absolute;right:18px;top:50%;width:8px;height:8px;margin-top:-6px;border-right:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(45deg);transition:transform .25s}
+.gitem.open>button::after{transform:rotate(-135deg);margin-top:-2px}
+.gitem .gno{flex:none;width:34px;height:34px;border-radius:50%;background:var(--ivory);border:1.5px solid var(--gold);display:grid;place-items:center;font-size:16px}
+.gitem.star .gno{background:var(--navy);border-color:var(--navy)}
+.gitem h3{font-size:15.5px;color:var(--navy);line-height:1.4}
+.gitem h3 small{display:block;font-weight:400;font-size:12.5px;color:var(--muted)}
+.gbody{display:none;padding:0 16px 18px 60px;font-size:14.5px;color:#3E4A57}
+.gitem.open .gbody{display:block}
+.gbody p+p{margin-top:10px}
+.gbody b{color:var(--navy)}
+.gbody .look{display:block;margin-top:10px;padding:10px 12px;background:#FBF4E2;border-radius:10px;font-size:13.5px;color:#6A5217}
+.gorder{margin-top:12px;padding:14px 16px;border-radius:12px;background:var(--navy);color:#D8DEE6;font-size:13.5px}
+.gorder strong{color:var(--gold)}
+.glink{display:inline-block;margin-top:8px;color:var(--navy);font-weight:700;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px;min-height:32px}
+@media (max-width:360px){.gbody{padding-left:16px}}
+
 footer{margin-top:52px;padding:34px 24px calc(34px + env(safe-area-inset-bottom,0px));background:var(--navy-deep);color:#AFBACA;font-size:12.5px;text-align:center}
 footer .f-title{font-family:var(--serif);color:var(--gold);font-size:16px;margin-bottom:8px}
 
@@ -213,25 +236,28 @@ footer .f-title{font-family:var(--serif);color:var(--gold);font-size:16px;margin
       <div class="more">부다페스트 켈레티(Keleti)역에서 빈 중앙역(Wien Hbf)까지 직행. 좌석 지정해 두면 편하게 앉아 갈 수 있어요.<br>※ 예매할 때 실제 시간표를 꼭 확인하세요.</div></div></li>
 
     <li><div class="t">11:10<small>~12:20</small></div>
-      <div class="card"><button aria-expanded="false"><h3>벨베데레 정원 산책</h3><span class="badge b-walk">도보 15분</span><span class="badge b-walk">무료</span></button>
-      <div class="more">중앙역에서 걸어서 약 15분. 하궁에서 상궁까지 이어지는 바로크 정원은 무료예요. 천천히 걸으며 사진 찍기 좋은 시간!</div></div></li>
+      <div class="card"><button aria-expanded="false"><h3>간식 챙기고 벨베데레로</h3><span class="badge b-food">역 빵집</span><span class="badge b-walk">도보 15분</span></button>
+      <div class="more">점심은 14:45 카페에서 먹으니까, 중앙역 빵집에서 간단한 간식을 하나 사두세요. 걸어서 15분이면 벨베데레 상궁 앞이에요.</div></div></li>
 
-    <li class="key"><div class="t">12:30<small>~14:00</small></div>
-      <div class="card"><button aria-expanded="false"><h3>벨베데레 상궁 관람</h3><span class="badge b-must">✅ 예약 완료</span></button>
-      <div class="more">12:30 입장 예약 완료. 입장 후에는 시간 제한 없이 볼 수 있어요.
+    <li class="key"><div class="t">12:30<small>~13:40</small></div>
+      <div class="card"><button aria-expanded="false"><h3>벨베데레 상궁 관람</h3><span class="badge b-must">12:30 예약 권장</span></button>
+      <div class="more">입장 시간 지정 예약제예요. 12:30 슬롯 예약을 권장해요. 입장 후에는 시간 제한 없이 볼 수 있어요. <a href="#guide" class="glink" data-tab="0">🎧 관람 가이드 보기</a>
         <ul><li>클림트 《키스》, 《유디트》</li><li>에곤 실레 컬렉션</li><li>대리석 홀(Marble Hall)</li></ul></div></div></li>
 
-    <li><div class="t">14:00<small>~14:20</small></div>
+    <li><div class="t">13:40<small>~14:15</small></div>
+      <div class="card"><button aria-expanded="false"><h3>벨베데레 정원 산책</h3><span class="badge b-walk">무료</span></button>
+      <div class="more">상궁 앞 바로크 정원을 걸으며 사진 타임. 14:15에는 트램 정류장으로 출발하세요.</div></div></li>
+
+    <li><div class="t">14:15<small>~14:35</small></div>
       <div class="card"><button aria-expanded="false"><h3>트램 D번으로 이동</h3><span class="badge b-tram">트램 D</span></button>
       <div class="more"><div class="path"><span>Schloss Belvedere 승차</span><span>Burgring 하차</span></div>
       링슈트라세를 따라 달리는 노선이라 창밖 풍경도 좋아요.</div></div></li>
 
-    <li class="key"><div class="t">14:30<small>~16:45</small></div>
-      <div class="card"><button aria-expanded="false"><h3>빈 미술사 박물관 &amp; 돔 홀 카페</h3><span class="badge b-tram">현장 구매</span><span class="badge b-food">점심 겸 티타임</span></button>
-      <div class="more">돔 아래 원형 소파에서 멜랑쥐와 아펠슈트루델. 카페는 박물관 안에 있어서 입장권만 있으면 돼요. 입장권은 현장 매표소에서 구매(성인 €24).
-        <ul><li>브뤼헐 《바벨탑》</li><li>페르메이르 《회화의 예술》</li><li>라파엘로 《초원의 마돈나》</li></ul></div></div></li>
+    <li class="key"><div class="t">14:45<small>~17:00</small></div>
+      <div class="card"><button aria-expanded="false"><h3>빈 미술사 박물관 &amp; 돔 홀 카페</h3><span class="badge b-must">14:45 예약 권장</span><span class="badge b-food">카페 먼저</span></button>
+      <div class="more">입장하면 대계단을 올라 <strong>돔 홀 카페 먼저</strong>! 커피와 빵으로 점심을 먹고 회화관으로 가요. 카페는 입장권만 있으면 따로 예약이 필요 없어요. <a href="#guide" class="glink" data-tab="1">🎧 관람 가이드 보기</a></div></div></li>
 
-    <li><div class="t">16:50<small>~17:30</small></div>
+    <li><div class="t">17:00<small>~17:30</small></div>
       <div class="card"><button aria-expanded="false"><h3>호프부르크 왕궁 외관 산책</h3><span class="badge b-walk">도보</span><span class="badge b-walk">무료</span></button>
       <div class="more"><div class="path"><span>부르크 문</span><span>영웅 광장</span><span>미하엘 광장</span></div></div></div></li>
 
@@ -244,7 +270,7 @@ footer .f-title{font-family:var(--serif);color:var(--gold);font-size:16px;margin
       <div class="more">입구 쪽 내부는 무료로 들어가 볼 수 있어요. 밖에서 모자이크 지붕도 꼭 올려다보세요.</div></div></li>
 
     <li class="key"><div class="t">18:30<small>~19:45</small></div>
-      <div class="card"><button aria-expanded="false"><h3>피그뮐러 슈니첼 저녁</h3><span class="badge b-must">18:30 예약</span><span class="badge b-food">슈니첼</span></button>
+      <div class="card"><button aria-expanded="false"><h3>피그뮐러 슈니첼 저녁</h3><span class="badge b-must">18:30 예약 권장</span><span class="badge b-food">슈니첼</span></button>
       <div class="more">1905년부터 이어온 원조 슈니첼 집. 접시보다 큰 슈니첼과 감자 샐러드가 대표 메뉴예요.<br>
         <div class="path"><span>본점 Wollzeile 5</span><span>대성당에서 도보 3분</span></div></div></div></li>
 
@@ -252,6 +278,51 @@ footer .f-title{font-family:var(--serif);color:var(--gold);font-size:16px;margin
       <div class="card"><button aria-expanded="false"><h3>U1 → 빈 중앙역 → 부다페스트</h3><span class="badge b-tram">지하철 U1</span><span class="badge b-train">20:30 Railjet</span></button>
       <div class="more">슈테판플라츠역에서 U1을 타면 중앙역까지 약 6분. 20:30 열차로 부다페스트에는 23시쯤 도착해요.</div></div></li>
   </ol>
+</section>
+
+<!-- ================= GUIDE ================= -->
+<section class="block" id="guide">
+  <p class="over">Art Guide</p>
+  <h2>관람 가이드</h2>
+  <p class="lead">가이드가 옆에서 설명해 주듯, 버튼을 눌러 이야기를 들어보세요.</p>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-tab="0">🎨 벨베데레</button>
+    <button class="tab" role="tab" aria-selected="false" data-tab="1">🖼️ 미술사 박물관</button>
+  </div>
+  <div class="gpanel" data-panel="0">
+      <div class="card gitem"><button aria-expanded="false"><span class="gno">🏰</span><h3>궁전 이야기<small>오이겐 공의 여름 궁전</small></h3></button>
+        <div class="gbody"><p>오스만 제국 군대를 물리친 전쟁 영웅 <b>오이겐 공</b>의 여름 궁전이에요.</p><p>"벨베데레"는 이탈리아어로 <b>"아름다운 전망"</b>. 아래 하궁은 살던 곳, 지금 들어가는 상궁은 파티와 손님 접대를 하던 곳이었어요.</p></div></div>
+      <div class="card gitem"><button aria-expanded="false"><span class="gno">✨</span><h3>마블홀<small>1955년, 오스트리아가 독립한 방</small></h3></button>
+        <div class="gbody"><p>궁전 한가운데 가장 화려한 방이에요. 천장화를 꼭 올려다보세요.</p><p><b>1955년 오스트리아가 독립 조약에 서명한 곳</b>이에요. 서명 후 외무장관이 발코니에서 조약서를 펼쳐 보이자 광장의 시민들이 환호했대요.</p><span class="look">👀 창밖으로 그 발코니 풍경이 그대로 보여요</span></div></div>
+      <div class="card gitem star"><button aria-expanded="false"><span class="gno">💛</span><h3>클림트 《키스》<small>오늘의 주인공</small></h3></button>
+        <div class="gbody"><p><b>왜 금색일까?</b> 클림트의 아버지는 금 세공사였어요. 이탈리아 라벤나의 반짝이는 비잔틴 모자이크에서 영감을 받아 "황금 시기"를 열었어요.</p><p><b>옷 무늬</b> 남자 옷은 네모, 여자 옷은 동그라미와 꽃. 남성과 여성이 황금빛 안에서 하나가 되는 모습이에요.</p><p><b>발밑</b> 두 사람은 꽃밭 절벽 끝에 있어요. 사랑의 황홀함과 불안함이 함께 담겼다는 해석이 많아요.</p><p><b>모델은?</b> 연인 에밀리 플뢰게와 클림트 자신이라는 이야기가 전해지지만 정답은 아무도 몰라요. 전시되자마자 국가가 바로 사들였을 만큼 처음부터 사랑받았어요.</p><span class="look">👀 사람이 가장 많은 방이라 입장하자마자 먼저 가도 좋아요</span></div></div>
+      <div class="card gitem"><button aria-expanded="false"><span class="gno">🗡️</span><h3>클림트 《유디트》<small>황홀한 표정의 팜파탈</small></h3></button>
+        <div class="gbody"><p>적장의 목을 벤 구약 성경 속 영웅 유디트. 그런데 영웅보다 <b>황홀한 표정의 팜파탈</b>로 그려서 당시 큰 화제가 됐어요.</p><span class="look">👀 금색 액자도 작품의 일부 — 금 세공사였던 클림트의 동생이 만들었어요</span></div></div>
+      <div class="card gitem"><button aria-expanded="false"><span class="gno">🖤</span><h3>에곤 실레<small>28년의 짧은 인생</small></h3></button>
+        <div class="gbody"><p>클림트가 아끼던 천재 제자. 거칠고 날카로운 선이 특징이에요.</p><p><b>《죽음과 소녀》</b> 오랜 연인과 헤어지던 무렵의 그림. 꽉 붙잡고 있지만 이미 끝나가는 관계가 느껴져요.</p><p><b>《가족》</b> 실레와 아내, 그리고 아기. 1918년 스페인 독감으로 임신 6개월이던 아내가 먼저 떠나고, 실레도 3일 뒤 28살에 숨을 거뒀어요. 태어나지 못한 아이와 함께한 "상상 속 가족"이 된 그림이에요.</p></div></div>
+      <div class="card gitem"><button aria-expanded="false"><span class="gno">🐎</span><h3>놓치면 아까운 작품<small>나폴레옹 · 표정 조각</small></h3></button>
+        <div class="gbody"><p><b>다비드 《알프스를 넘는 나폴레옹》</b> 교과서에서 본 그 그림! 화가가 여러 점을 그렸는데 그중 한 점이 여기 있어요. 📸 사진 명소</p><p><b>메서슈미트 《캐릭터 두상》</b> 찡그리고 웃고 입을 삐죽 내민 얼굴 조각들. 표정 따라 하며 사진 찍기 좋아요 😆</p></div></div>
+      <div class="card gitem"><button aria-expanded="false"><span class="gno">🌿</span><h3>정원 산책<small>신화의 세계로 설계된 정원</small></h3></button>
+        <div class="gbody"><p>아래쪽은 지하 세계, 가운데는 파르나소스 산, 맨 위 상궁은 <b>올림포스 신들의 세계</b>예요. 오이겐 공은 자신을 신의 자리에 둔 셈이죠.</p><span class="look">👀 상궁 앞에서 내려다보면 멀리 슈테판 대성당 첨탑까지 — "아름다운 전망"이라는 이름 그대로예요</span></div></div>
+    <div class="gorder"><strong>⏱️ 추천 순서 (70분)</strong><br>마블홀 → 클림트 → 실레 → 나폴레옹·두상 → 정원</div>
+  </div>
+  <div class="gpanel" data-panel="1" hidden>
+      <div class="card gitem"><button aria-expanded="false"><span class="gno">🏛️</span><h3>대계단<small>클림트의 젊은 시절 벽화</small></h3></button>
+        <div class="gbody"><p>계단 중간의 카노바 조각 <b>《테세우스》</b>를 지나 올라가요.</p><span class="look">👀 고개를 들면 기둥 사이에 클림트가 젊을 때 그린 벽화가 있어요. 벨베데레의 《키스》와 비교해 보세요</span></div></div>
+      <div class="card gitem"><button aria-expanded="false"><span class="gno">☕</span><h3>돔 홀 카페<small>먼저 들러서 점심</small></h3></button>
+        <div class="gbody"><p>세계에서 가장 아름다운 카페로 꼽히는 곳. 돔 아래 원형 소파에서 <b>멜랑쥐와 아펠슈트루델</b>로 점심을 먹어요.</p><p>박물관 안에 있어서 입장권만 있으면 따로 예약이 필요 없어요.</p></div></div>
+      <div class="card gitem star"><button aria-expanded="false"><span class="gno">🗼</span><h3>브뤼헐 방<small>이 박물관의 꽃</small></h3></button>
+        <div class="gbody"><p>브뤼헐 작품을 세계에서 가장 많이 가진 곳이에요.</p><p><b>《바벨탑》</b> 하늘까지 닿으려던 인간의 욕심. 작은 일꾼들을 찾아보세요.<br><b>《눈 속의 사냥꾼》</b> 겨울 풍경화의 대표작.<br><b>《농민의 결혼식》</b> 신부가 어디 있는지 찾아보세요.</p></div></div>
+      <div class="card gitem"><button aria-expanded="false"><span class="gno">🎨</span><h3>페르메이르 · 라파엘로<small>빛의 화가와 르네상스의 성모</small></h3></button>
+        <div class="gbody"><p><b>페르메이르 《회화의 예술》</b> 화가가 그림 그리는 모습을 그린 그림. 창문으로 들어오는 부드러운 빛을 보세요.</p><p><b>라파엘로 《초원의 성모》</b> 성모와 두 아기가 만드는 안정적인 삼각형 구도가 포인트예요.</p></div></div>
+      <div class="card gitem"><button aria-expanded="false"><span class="gno">🍇</span><h3>아르침볼도 《사계》<small>과일·채소로 만든 얼굴</small></h3></button>
+        <div class="gbody"><p>가까이 보면 과일과 채소, 멀리서 보면 사람 얼굴! 황제를 즐겁게 하려고 그린 그림이에요.</p><span class="look">📸 사진 찍기 인기 1위</span></div></div>
+      <div class="card gitem"><button aria-expanded="false"><span class="gno">👑</span><h3>벨라스케스 · 카라바조<small>공주의 초상과 강렬한 명암</small></h3></button>
+        <div class="gbody"><p><b>벨라스케스 《마르가리타 공주》</b> 분홍·파랑 드레스의 어린 공주. 먼 나라로 시집갈 예정이라 신랑 집안에 성장 모습을 보내려고 그린 초상화예요.</p><p><b>카라바조 《골리앗의 머리를 든 다윗》</b> 어둠 속에서 빛이 쏟아지는 강렬한 명암을 보세요.</p></div></div>
+      <div class="card gitem"><button aria-expanded="false"><span class="gno">💎</span><h3>쿤스트카머<small>시간이 남으면</small></h3></button>
+        <div class="gbody"><p>아래층의 황실 보물 컬렉션. 황금 소금그릇 <b>《살리에라》</b>가 대표작이에요.</p></div></div>
+    <div class="gorder"><strong>💡 관람 팁</strong><br>입구에서 관람 지도 받기 · 플래시 없이 사진 가능 · 큰 가방은 보관함에 · 17:00에 나오면 저녁 일정까지 여유 있어요</div>
+  </div>
 </section>
 
 <!-- ================= MAP ================= -->
@@ -314,14 +385,14 @@ footer .f-title{font-family:var(--serif);color:var(--gold);font-size:16px;margin
       <a class="btn btn-navy" href="https://jegy.mav.hu/" target="_blank" rel="noopener">MÁV에서 기차표 예매</a>
     </div>
     <div class="card">
-      <div class="step"><b>3</b><h3>벨베데레 상궁 · 12:30 ✅</h3></div>
-      <p>예약 완료! 확인 메일의 QR코드를 휴대폰에 저장해 두세요. 성인 약 €23~24.</p>
-      <a class="btn btn-gold" href="https://www.belvedere.at/en/tickets" target="_blank" rel="noopener">벨베데레 예약 확인</a>
+      <div class="step"><b>3</b><h3>벨베데레 상궁 · 12:30 예약 권장</h3></div>
+      <p>입장 시간 지정 예약제예요. 12:30 슬롯으로 예약하세요. 성인 약 €23~24, 메일로 온 QR코드로 입장해요.</p>
+      <a class="btn btn-gold" href="https://www.belvedere.at/en/tickets" target="_blank" rel="noopener">벨베데레 입장권 예매</a>
     </div>
     <div class="card">
-      <div class="step"><b>4</b><h3>빈 미술사 박물관 · 현장 구매</h3></div>
-      <p>현장 매표소에서 성인 €24. 시간 지정 입장제라서 그 시간대가 마감이면 다음 시간까지 기다릴 수 있어요. 줄이 길면 휴대폰으로 바로 온라인 구매(€22)하는 것도 방법이에요.</p>
-      <a class="btn btn-gold" href="https://shop.khm.at/tickets" target="_blank" rel="noopener">KHM 온라인 판매처 (필요할 때)</a>
+      <div class="step"><b>4</b><h3>빈 미술사 박물관 · 14:45 예약 권장</h3></div>
+      <p>입장 시간 지정 예약제예요. <strong>ENTRANCE TICKET</strong>을 고르고 14:45 슬롯으로 예약하세요. 온라인 성인 €22(현장 €24), 관람 시간 제한은 없어요.</p>
+      <a class="btn btn-gold" href="https://shop.khm.at/tickets" target="_blank" rel="noopener">KHM 입장권 예매</a>
     </div>
     <div class="card">
       <div class="step"><b>5</b><h3>피그뮐러 슈니첼 · 18:30</h3></div>
@@ -331,7 +402,7 @@ footer .f-title{font-family:var(--serif);color:var(--gold);font-size:16px;margin
   </div>
 
   <div class="notice"><strong>📌 꼭 확인하세요</strong><br>
-    · 2026년 9월 8일부터 미술사 박물관도 <strong>입장 시간 지정제</strong>로 바뀌었어요. 현장 구매도 되지만 원하는 시간대가 마감일 수 있어요.<br>
+    · 2026년 9월 8일부터 미술사 박물관도 <strong>입장 시간 지정제</strong>예요. 현장 구매도 되지만 원하는 시간이 마감될 수 있어 예약을 권장해요.<br>
     · 미술사 박물관은 <strong>월요일 휴관</strong>(여름철 제외)이에요. 월요일 여행이면 일정을 바꿔야 해요.<br>
     · 가짜 예매 사이트가 많아요. 위 공식 링크에서만 구매하세요.</div>
 </section>
@@ -364,7 +435,7 @@ footer .f-title{font-family:var(--serif);color:var(--gold);font-size:16px;margin
     <li><label><input type="checkbox" data-k="shoes"><div><strong>👟 편한 신발</strong><span>박물관 두 곳과 구시가지까지 하루 종일 걸어요.</span></div></label></li>
     <li><label><input type="checkbox" data-k="bag"><div><strong>👜 작은 크로스백</strong><span>백팩은 미술관 보관함에 맡겨야 해요. 가벼운 가방이 편해요.</span></div></label></li>
     <li><label><input type="checkbox" data-k="apps"><div><strong>📱 ÖBB · WienMobil 앱</strong><span>기차표와 교통권 QR코드를 미리 저장해 두세요.</span></div></label></li>
-    <li><label><input type="checkbox" data-k="tickets"><div><strong>🎟️ 예약 2건</strong><span>벨베데레 12:30 · 피그뮐러 18:30 (박물관은 현장 구매)</span></div></label></li>
+    <li><label><input type="checkbox" data-k="tickets"><div><strong>🎟️ 예약 3건 (권장)</strong><span>벨베데레 12:30 · 미술사 박물관 14:45 · 피그뮐러 18:30</span></div></label></li>
   </ul>
 </section>
 
@@ -380,6 +451,22 @@ footer .f-title{font-family:var(--serif);color:var(--gold);font-size:16px;margin
   document.querySelectorAll('.tl .card>button').forEach(function(b){
     b.addEventListener('click',function(){
       var c=b.parentElement, open=c.classList.toggle('open');
+      b.setAttribute('aria-expanded',open?'true':'false');
+    });
+  });
+
+
+  /* Guide tabs + accordion */
+  var tabs=document.querySelectorAll('.tab'), panels=document.querySelectorAll('.gpanel');
+  function setTab(i){
+    tabs.forEach(function(t){t.setAttribute('aria-selected',t.dataset.tab==i?'true':'false');});
+    panels.forEach(function(p){p.hidden=p.dataset.panel!=i;});
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){setTab(t.dataset.tab);});});
+  document.querySelectorAll('.glink').forEach(function(l){l.addEventListener('click',function(){setTab(l.dataset.tab);});});
+  document.querySelectorAll('.gitem>button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var open=b.parentElement.classList.toggle('open');
       b.setAttribute('aria-expanded',open?'true':'false');
     });
   });
